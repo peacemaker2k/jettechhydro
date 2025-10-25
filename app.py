@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://jetechhydro.vercel.app/"}})
+CORS(app, resources={r"/*": {"origins": "https://jetechhydro.vercel.app"}})
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
