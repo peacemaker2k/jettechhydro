@@ -135,6 +135,42 @@ const Services = () => {
     }
   };
 
+  const CategoryIcon = ({ category, className = 'w-6 h-6' }) => {
+    // simple inline SVGs for consistent icons
+    if (category === 'cleaning') {
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.134 6.686 5 9.5 5 12a7 7 0 0014 0c0-2.5-3.134-5.314-7-10z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    }
+    if (category === 'demolition') {
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21l3-3 4 4 11-11-4-4L6 17 3 21z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M14 7l3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    }
+    if (category === 'marine') {
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12s4-4 9-4 9 4 9 4-4 4-9 4-9-4-9-4z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 8v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    }
+    // testing / default
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 15v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M7 10l5-5 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 3v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    );
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Header with Quick Navigation */}
@@ -229,15 +265,12 @@ const Services = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    <div className="absolute top-4 right-4 text-4xl bg-white/90 rounded-full p-2">
-                      {service.icon}
-                    </div>
                   </div>
                 )}
                 
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    {!service.image && <div className="text-4xl">{service.icon}</div>}
+                    {!service.image && <CategoryIcon category={service.category} className="w-8 h-8 text-blue-600" />}
                     <div className={`transition-all duration-300 ${hoveredService === index ? 'rotate-45 scale-110' : ''}`}>
                       <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -380,7 +413,7 @@ const Services = () => {
             </Link>
             
             <a
-              href="tel:+919876543210"
+              href="tel:+919677210456"
               className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-xl"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

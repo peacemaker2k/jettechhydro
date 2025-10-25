@@ -77,7 +77,11 @@ const Home = () => {
                     <div className="text-primary font-bold text-lg">3500 Bar</div>
                     <div className="text-primary text-sm">Max Pressure</div>
                   </div>
-                </div>
+                  </div>
+                  {/* Decorative badge: show in-flow on small screens, absolute on large screens */}
+                  <div className="mt-4 lg:mt-0 lg:absolute lg:-bottom-10 lg:-left-36 bg-white/90 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-full px-5 py-3 shadow-lg self-start">
+                    <div className="text-sm font-semibold text-primary">10+ Years</div>
+                  </div>
               </div>
             </div>
           </div>
@@ -147,15 +151,11 @@ const Home = () => {
             </div>
             
             <div className="relative">
-              {/* <img
-                src="https://images.unsplash.com/photo-1541976076758-347942db1970?q=80&w=600&auto=format&fit=crop"
-                alt="Professional hydro jetting team"
-                className="rounded-xl shadow-2xl"
-              /> */}
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">10+</div>
-                  <div className="text-gray-600">Years Combined Experience</div>
+              {/* Decorative badge: in-flow on small screens (centered), absolutely positioned on large screens */}
+              <div className="relative lg:absolute lg:-bottom-8 lg:-left-8 bg-white p-4 lg:p-6 rounded-xl shadow-lg text-center mx-auto lg:mx-0 w-full max-w-xs lg:w-auto z-10">
+                <div>
+                  <div className="text-2xl lg:text-3xl font-bold text-primary">10+</div>
+                  <div className="text-gray-600 text-sm lg:text-base">Years Combined Experience</div>
                 </div>
               </div>
             </div>
