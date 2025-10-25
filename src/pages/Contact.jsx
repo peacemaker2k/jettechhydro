@@ -108,7 +108,7 @@ const Contact = () => {
     }
 
     try {
-      const res = await fetch("https://jettechhydro.onrender.com/send-email", {
+      const res = await fetch("https://jetechhydro.up.railway.app/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
