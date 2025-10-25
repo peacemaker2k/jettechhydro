@@ -33,8 +33,10 @@ def send_email():
     """)
 
     try:
-        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
+        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=60) as server:
+            server.ehlo()
             server.starttls()
+            server.ehlo()
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             server.send_message(msg)
         return jsonify({
