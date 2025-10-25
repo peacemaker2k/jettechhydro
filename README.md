@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# jettechhydro
+Jetech Hydro — hydro jetting &amp; industrial cleaning company website
+=======
 # Jetech Hydro - Professional Industrial Hydro Jetting Services
 
 A modern, responsive website for Jetech Hydro, showcasing professional industrial hydro jetting services across South India.
@@ -208,3 +212,4 @@ This project is proprietary to Jetech Hydro. All rights reserved.
 ---
 
 **Built with ❤️ for Jetech Hydro - Leading Industrial Hydro Jetting Services in South India**
+>>>>>>> a82f7b4 (Initial Commit)
