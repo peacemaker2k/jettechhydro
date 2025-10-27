@@ -7,14 +7,13 @@ import os
 
 load_dotenv()
 
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+SMTP_SERVER = os.getenv("SMTP_SERVER", "smtp.gmail.com")
+SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://jetechhydro.vercel.app"}})
-
-SMTP_SERVER = 'smtp.gmail.com'
-SMTP_PORT = 587
-EMAIL_ADDRESS = 'sanjayjaya2000@gmail.com'
-EMAIL_PASSWORD = 'mxya ounl yjng mvuo'  # App password
-
 
 @app.route("/send-email", methods=["POST"])
 def send_email():
