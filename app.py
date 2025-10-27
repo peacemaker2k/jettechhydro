@@ -18,7 +18,7 @@ def send_email():
             },
             json={
                 "from": "onboarding@resend.dev",
-                "to": ["kuttisanjay2000@gmail.com"],
+                "to": ["sanjayjaya2000@gmail.com"],
                 "subject": f"New Inquiry from {data['name']}",
                 "html": f"""
                     <p><strong>Name:</strong> {data['name']}</p>
