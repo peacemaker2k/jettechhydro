@@ -17,7 +17,7 @@ def send_email():
                 "Content-Type": "application/json"
             },
             json={
-                "from": "info@jetechhydro.com",
+                "from": "onboarding@resend.dev",
                 "to": ["kuttisanjay2000@gmail.com"],
                 "subject": f"New Inquiry from {data['name']}",
                 "html": f"""
