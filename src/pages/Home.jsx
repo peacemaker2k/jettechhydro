@@ -79,9 +79,6 @@ const Home = () => {
                   </div>
                   </div>
                   {/* Decorative badge: show in-flow on small screens, absolute on large screens */}
-                  <div className="mt-4 lg:mt-0 lg:absolute lg:-bottom-10 lg:-left-36 bg-white/90 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-full px-5 py-3 shadow-lg self-start">
-                    <div className="text-sm font-semibold text-primary">10+ Years</div>
-                  </div>
               </div>
             </div>
           </div>
